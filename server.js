@@ -12,10 +12,20 @@ app.use(bodyParser.json());
 // Simulação de pedidos recebidos
 const pedidos = [];
 
+// 🧾 Importa os dados do cardápio
+const categorias = require('./categorias.json');
+
+// 🌐 Rotas
 app.get('/', (req, res) => {
   res.send('API Suprema Pizza Cine funcionando!');
 });
 
+// Rota do cardápio
+app.get('/api/cardapio', (req, res) => {
+  res.json(categorias.categorias);
+});
+
+// Rotas de pedidos
 app.get('/api/pedidos', (req, res) => {
   res.json(pedidos);
 });
