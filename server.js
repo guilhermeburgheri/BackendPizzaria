@@ -19,14 +19,21 @@ app.get('/', (req, res) => {
 });
 
 app.get('/api/cardapio', (req, res) => {
-  res.json(categorias);
+  res.json(categorias.categorias);
 });
 
 // Listar pedidos
 app.get('/api/pedidos', (req, res) => {
   db.all('SELECT * FROM pedidos ORDER BY criado_em DESC', [], (err, rows) => {
     if (err) return res.status(500).json({ error: err.message });
-    res.json(rows);
+
+    // Convertendo string JSON para array
+    const pedidos = rows.map(pedido => ({
+      ...pedido,
+      itens: JSON.parse(pedido.itens)
+    }));
+
+    res.json(pedidos);
   });
 });
 
