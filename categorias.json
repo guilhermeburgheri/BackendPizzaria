@@ -7,37 +7,37 @@
                     "id": 1,
                     "nome": "Bumblebee",
                     "descricao": "Saborosos palitos de muçarela empanados.",
-                    "precoG": 32.0
+                    "preco": 32.0
                 },
                 {
                     "id": 2,
                     "nome": "Coppola",
                     "descricao": "Calabresa fatiada ao forno e limão em fatias.",
-                    "precoG": 28.0
+                    "preco": 28.0
                 },
                 {
                     "id": 3,
                     "nome": "Insustentável Leveza do Ser",
                     "descricao": "Salada de rúcula, palmito, tomate cereja e azeitonas pretas.",
-                    "precoG": 32.0
+                    "preco": 32.0
                 },
                 {
                     "id": 4,
                     "nome": "Perdido em Marte",
                     "descricao": "Batata rústica frita, crocante por fora e macia por dentro.",
-                    "precoG": 27.0
+                    "preco": 27.0
                 },
                 {
                     "id": 5,
                     "nome": "Senhor dos Anéis",
                     "descricao": "Deliciosos anéis de cebola empanados e fritos.",
-                    "precoG": 26.0
+                    "preco": 26.0
                 },
                 {
                     "id": 6,
                     "nome": "Stallone",
                     "descricao": "Casquinha de massa crocante, acompanha nosso molho de tomates.",
-                    "precoG": 26.0
+                    "preco": 26.0
                 }
             ]
         },
@@ -306,7 +306,7 @@
                     "id": 34,
                     "nome": "Calzone Enigma da Pirâmide",
                     "descricao": "Calzone de Calabresa, Frango e Presunto. Todos são recheados com muçarela, catupiry e azeitonas verdes sem caroço.",
-                    "precoG": 96
+                    "preco": 96
                 },
                 {
                     "id": 35,
@@ -480,37 +480,37 @@
                     "id": 52,
                     "nome": "Cafés",
                     "descricao": "Cafés e Chás em Cápsulas",
-                    "precoG": 6.0
+                    "preco": 6.0
                 },
                 {
                     "id": 53,
                     "nome": "Gabriela",
                     "descricao": "Café com canelinha",
-                    "precoG": 8.0
+                    "preco": 8.0
                 },
                 {
                     "id": 54,
                     "nome": "Casa Comigo",
                     "descricao": "Papaia batido com sorvete de creme, acompanha licor de cassis.",
-                    "precoG": 28.0
+                    "preco": 28.0
                 },
                 {
                     "id": 55,
                     "nome": "Charlie Brownie e Snoopy",
                     "descricao": "Brownie e sorvete de creme.",
-                    "precoG": 26.0
+                    "preco": 26.0
                 },
                 {
                     "id": 56,
                     "nome": "Coringa",
                     "descricao": "Espetacular pudim de leite com raspinhas de limão.",
-                    "precoG": 15.0
+                    "preco": 15.0
                 },
                 {
                     "id": 57,
                     "nome": "Fantasmas se Divertem",
                     "descricao": "Camada de biscoitos, bananas fatiadas, doce de leite e chantilly polvilhado com canela.",
-                    "precoG": 16.0
+                    "preco": 16.0
                 }
             ]
         },
@@ -521,157 +521,157 @@
                     "id": 58,
                     "nome": "Coca-Cola KS",
                     "descricao": "Para alegrar o dia",
-                    "precoG": 9.0
+                    "preco": 9.0
                 },
                 {
                     "id": 59,
                     "nome": "Coca-Cola lata",
                     "descricao": "Para alegrar o dia",
-                    "precoG": 9.0
+                    "preco": 9.0
                 },
                 {
                     "id": 60,
                     "nome": "Coca-Cola Zero lata",
                     "descricao": "Para alegrar o dia",
-                    "precoG": 9.0
+                    "preco": 9.0
                 },
                 {
                     "id": 61,
                     "nome": "Fanta Laranja lata",
                     "descricao": "Para alegrar o dia",
-                    "precoG": 9.0
+                    "preco": 9.0
                 },
                 {
                     "id": 62,
                     "nome": "Guaraná lata",
                     "descricao": "Para alegrar o dia",
-                    "precoG": 9.0
+                    "preco": 9.0
                 },
                 {
                     "id": 63,
                     "nome": "Guaraná Zero lata",
                     "descricao": "Para alegrar o dia",
-                    "precoG": 9.0
+                    "preco": 9.0
                 },
                 {
                     "id": 64,
                     "nome": "Pepsi lata",
                     "descricao": "Para alegrar o dia",
-                    "precoG": 9.0
+                    "preco": 9.0
                 },
                 {
                     "id": 65,
                     "nome": "Pepsi Black lata",
                     "descricao": "Para alegrar o dia",
-                    "precoG": 9.0
+                    "preco": 9.0
                 },
                 {
                     "id": 66,
                     "nome": "Schweppes Citrus lata",
                     "descricao": "Para alegrar o dia",
-                    "precoG": 9.0
+                    "preco": 9.0
                 },
                 {
                     "id": 67,
                     "nome": "Soda Limonada lata",
                     "descricao": "Para alegrar o dia",
-                    "precoG": 9.0
+                    "preco": 9.0
                 },
                 {
                     "id": 68,
                     "nome": "Tônica lata",
                     "descricao": "Para alegrar o dia",
-                    "precoG": 9.0
+                    "preco": 9.0
                 },
                 {
                     "id": 69,
                     "nome": "H2O",
                     "descricao": "Limoneto ou limão",
-                    "precoG": 10.0
+                    "preco": 10.0
                 },
                 {
                     "id": 70,
                     "nome": "Itubaina Retrô",
                     "descricao": "Para alegrar o dia",
-                    "precoG": 8.0
+                    "preco": 8.0
                 },
                 {
                     "id": 71,
                     "nome": "Limonada Suiça",
                     "descricao": "limão, água leite condensado",
-                    "precoG": 16.0
+                    "preco": 16.0
                 },
                 {
                     "id": 72,
                     "nome": "Suco Polpas",
                     "descricao": "abacaxi, acerola, graviola, maracujá, morango, uva",
-                    "precoG": 14.0
+                    "preco": 14.0
                 },
                 {
                     "id": 73,
                     "nome": "Suco em Lata",
                     "descricao": "Pêssego, Uva",
-                    "precoG": 10.0
+                    "preco": 10.0
                 },
                 {
                     "id": 74,
                     "nome": "Suco Natural",
                     "descricao": "Laranja, Limão",
-                    "precoG": 14.0
+                    "preco": 14.0
                 },
                 {
                     "id": 75,
                     "nome": "Cerveja Amanteigada",
                     "descricao": "Sabor doce, receita secreta vinda do mundo bruxo.",
-                    "precoG": 18.0
+                    "preco": 18.0
                 },
                 {
                     "id": 76,
                     "nome": "Cocktail de fruta sem álcool",
                     "descricao": "Dois sabores a escolher: maracujá, morango, laranja, abacaxi, uva ou frutas vermelhas.",
-                    "precoG": 18.0
+                    "preco": 18.0
                 },
                 {
                     "id": 77,
                     "nome": "Água Mineral com gás",
                     "descricao": "Para se hidratar.",
-                    "precoG": 7.0
+                    "preco": 7.0
                 },
                 {
                     "id": 78,
                     "nome": "Água Mineral sem gás",
                     "descricao": "Para se hidratar.",
-                    "precoG": 6.0
+                    "preco": 6.0
                 },
                 {
                     "id": 79,
                     "nome": "Grinch",
                     "descricao": "O drink que vai conquistar seu coração! schweppes citrus, suco de abacaxi",
-                    "precoG": 18.0
+                    "preco": 18.0
                 },
                 {
                     "id": 80,
                     "nome": "Hotel Transilvânia",
                     "descricao": "Suco de limão e groselha",
-                    "precoG": 16.0
+                    "preco": 16.0
                 },
                 {
                     "id": 81,
                     "nome": "Sabre de Luz Azul",
                     "descricao": "Suco de limão aromatizado de aniso",
-                    "precoG": 16.0
+                    "preco": 16.0
                 },
                 {
                     "id": 82,
                     "nome": "Sabre de Luz Verde",
                     "descricao": "Suco de limão aromatizado de hortelã",
-                    "precoG": 16.0
+                    "preco": 16.0
                 },
                 {
                     "id": 83,
                     "nome": "La Doce Vida",
                     "descricao": "Soda italiana em diversos sabores",
-                    "precoG": 16.0
+                    "preco": 16.0
                 }
             ]
         },
@@ -682,193 +682,193 @@
                     "id": 84,
                     "nome": "Budweiser (sem álcool)",
                     "descricao": "Beba com moderação",
-                    "precoG": 13.0
+                    "preco": 13.0
                 },
                 {
                     "id": 85,
                     "nome": "Heineken (sem álcool)",
                     "descricao": "Beba com moderação",
-                    "precoG": 14.0
+                    "preco": 14.0
                 },
                 {
                     "id": 86,
                     "nome": "Heineken",
                     "descricao": "Beba com moderação",
-                    "precoG": 14.0
+                    "preco": 14.0
                 },
                 {
                     "id": 87,
                     "nome": "Malzbier",
                     "descricao": "Beba com moderação",
-                    "precoG": 12.0
+                    "preco": 12.0
                 },
                 {
                     "id": 88,
                     "nome": "Spaten",
                     "descricao": "Beba com moderação",
-                    "precoG": 12.0
+                    "preco": 12.0
                 },
                 {
                     "id": 89,
                     "nome": "Stella Artois",
                     "descricao": "Beba com moderação",
-                    "precoG": 12.0
+                    "preco": 12.0
                 },
                 {
                     "id": 90,
                     "nome": "Heineken 600ml",
                     "descricao": "Beba com moderação",
-                    "precoG": 19.0
+                    "preco": 19.0
                 },
                 {
                     "id": 91,
                     "nome": "Original 600ml",
                     "descricao": "Beba com moderação",
-                    "precoG": 18.0
+                    "preco": 18.0
                 },
                 {
                     "id": 92,
                     "nome": "Spaten 600ml",
                     "descricao": "Beba com moderação",
-                    "precoG": 18.0
+                    "preco": 18.0
                 },
                 {
                     "id": 93,
                     "nome": "Stella Artois 600ml",
                     "descricao": "Beba com moderação",
-                    "precoG": 19.0
+                    "preco": 19.0
                 },
                 {
                     "id": 94,
                     "nome": "Campari",
                     "descricao": "Beba com moderação",
-                    "precoG": 18.0
+                    "preco": 18.0
                 },
                 {
                     "id": 95,
                     "nome": "Rum Bacardi",
                     "descricao": "Beba com moderação",
-                    "precoG": 18.0
+                    "preco": 18.0
                 },
                 {
                     "id": 96,
                     "nome": "Whisky Red Label",
                     "descricao": "Beba com moderação",
-                    "precoG": 20.0
+                    "preco": 20.0
                 },
                 {
                     "id": 97,
                     "nome": "Cachaça Sagatiba",
                     "descricao": "Beba com moderação",
-                    "precoG": 13.0
+                    "preco": 13.0
                 },
                 {
                     "id": 98,
                     "nome": "Steinhaeger",
                     "descricao": "Beba com moderação",
-                    "precoG": 12.0
+                    "preco": 12.0
                 },
                 {
                     "id": 99,
                     "nome": "Saquê",
                     "descricao": "Beba com moderação",
-                    "precoG": 12.0
+                    "preco": 12.0
                 },
                 {
                     "id": 100,
                     "nome": "Vodka Smirnoff",
                     "descricao": "Beba com moderação",
-                    "precoG": 13.0
+                    "preco": 13.0
                 },
                 {
                     "id": 101,
                     "nome": "Vodka Absolut",
                     "descricao": "Beba com moderação",
-                    "precoG": 20.0
+                    "preco": 20.0
                 },
                 {
                     "id": 102,
                     "nome": "Cachaça Salinas",
                     "descricao": "Beba com moderação",
-                    "precoG": 13.0
+                    "preco": 13.0
                 },
                 {
                     "id": 103,
                     "nome": "Caipirinha de Cachaça",
                     "descricao": "Beba com moderação",
-                    "precoG": 22.0
+                    "preco": 22.0
                 },
                 {
                     "id": 104,
                     "nome": "Caipirinha de Sagatiba",
                     "descricao": "Beba com moderação",
-                    "precoG": 32.0
+                    "preco": 32.0
                 },
                 {
                     "id": 105,
                     "nome": "Caipirissima Rum Bacardi",
                     "descricao": "Beba com moderação",
-                    "precoG": 22.0
+                    "preco": 22.0
                 },
                 {
                     "id": 106,
                     "nome": "Caipiroska de Smirnoff",
                     "descricao": "Beba com moderação",
-                    "precoG": 24.0
+                    "preco": 24.0
                 },
                 {
                     "id": 107,
                     "nome": "Caipiroska de Absolut",
                     "descricao": "Beba com moderação",
-                    "precoG": 32.0
+                    "preco": 32.0
                 },
                 {
                     "id": 108,
                     "nome": "Saquerinha",
                     "descricao": "Beba com moderação",
-                    "precoG": 24.0
+                    "preco": 24.0
                 },
                 {
                     "id": 109,
                     "nome": "Grinch",
                     "descricao": "Schweppes citrus, suco de abacaxi e licor de menta",
-                    "precoG": 22.0
+                    "preco": 22.0
                 },
                 {
                     "id": 110,
                     "nome": "Campari Tônica",
                     "descricao": "Campari, tônica e rodelas de limão ou laranja",
-                    "precoG": 27.0
+                    "preco": 27.0
                 },
                 {
                     "id": 111,
                     "nome": "Cerveja Amanteigada",
                     "descricao": "Licor de marula",
-                    "precoG": 23.0
+                    "preco": 23.0
                 },
                 {
                     "id": 112,
                     "nome": "Piratas do Caribe",
                     "descricao": "Rum, limão, Coca-Cola e gelo",
-                    "precoG": 27.0
+                    "preco": 27.0
                 },
                 {
                     "id": 113,
                     "nome": "Sabre de Luz Azul",
                     "descricao": "Suco de limão com licor de anis",
-                    "precoG": 22.0
+                    "preco": 22.0
                 },
                 {
                     "id": 114,
                     "nome": "Sabre de Luz Verde",
                     "descricao": "Suco de limão com licor de menta",
-                    "precoG": 22.0
+                    "preco": 22.0
                 },
                 {
                     "id": 115,
                     "nome": "Gin Tônica",
                     "descricao": "Beba com moderação",
-                    "precoG": 29.0
+                    "preco": 29.0
                 }
             ]
         }
