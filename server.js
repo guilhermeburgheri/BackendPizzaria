@@ -28,10 +28,22 @@ app.get('/api/pedidos', (req, res) => {
     if (err) return res.status(500).json({ error: err.message });
 
     // Convertendo string JSON para array
-    const pedidos = rows.map(pedido => ({
-      ...pedido,
-      itens: JSON.parse(pedido.itens)
-    }));
+    const pedidos = rows.map(pedido => {
+      let itensParsed;
+      try {
+        itensParsed = JSON.parse(pedido.itens);
+      } catch (e) {
+        console.error("Erro ao fazer parse dos itens:", pedido.itens);
+        itensParsed = [];
+      }
+
+      return {
+        ...pedido,
+        itens: itensParsed
+      };
+    });
+
+    console.log("Pedidos formatados:", pedidos);
 
     res.json(pedidos);
   });
@@ -41,7 +53,8 @@ app.get('/api/pedidos', (req, res) => {
 app.post('/api/pedidos', (req, res) => {
   const { cliente, itens, total } = req.body;
   const stmt = db.prepare(`INSERT INTO pedidos (cliente, itens, total) VALUES (?, ?, ?)`);
-  stmt.run(cliente, JSON.stringify(itens), total, function (err) {
+  const itensStr = typeof itens === 'string' ? itens : JSON.stringify(itens);
+  stmt.run(cliente, itensStr, total, function (err) {
     if (err) return res.status(500).json({ error: err.message });
     res.status(201).json({ message: 'Pedido salvo!', id: this.lastID });
   });
@@ -55,6 +68,20 @@ app.delete('/api/pedidos/:id', (req, res) => {
     if (this.changes === 0) return res.status(404).json({ message: 'Pedido não encontrado' });
     res.json({ message: 'Pedido excluído com sucesso' });
   });
+});
+
+app.put('/api/pedidos/:id', (req, res) => {
+  const id = req.params.id;
+  const { itens, total } = req.body;
+
+  db.run(
+    'UPDATE pedidos SET itens = ?, total = ? WHERE id = ?',
+    [JSON.stringify(itens), total, id],
+    function (err) {
+      if (err) return res.status(500).json({ error: err.message });
+      res.json({ message: 'Pedido atualizado com sucesso' });
+    }
+  );
 });
 
 app.listen(PORT, () => {
