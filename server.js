@@ -49,17 +49,6 @@ app.get('/api/pedidos', (req, res) => {
   });
 });
 
-// Criar pedido
-app.post('/api/pedidos', (req, res) => {
-  const { cliente, itens, total, mesa } = req.body;
-  const stmt = db.prepare(`INSERT INTO pedidos (cliente, itens, total, mesa) VALUES (?, ?, ?, ?)`);
-  const itensStr = typeof itens === 'string' ? itens : JSON.stringify(itens);
-  stmt.run(cliente, itensStr, total, mesa, function (err) {
-    if (err) return res.status(500).json({ error: err.message });
-    res.status(201).json({ message: 'Pedido salvo!', id: this.lastID });
-  });
-});
-
 // Excluir pedido
 app.delete('/api/pedidos/:id', (req, res) => {
   const id = req.params.id;
@@ -82,6 +71,40 @@ app.put('/api/pedidos/:id', (req, res) => {
       res.json({ message: 'Pedido atualizado com sucesso' });
     }
   );
+});
+
+app.post("/api/pedidos", (req, res) => {
+  const { cliente, itens, total, mesa } = req.body;
+
+  db.get(`SELECT * FROM pedidos WHERE mesa = ? ORDER BY criado_em DESC LIMIT 1`, [mesa], (err, row) => {
+    if (err) return res.status(500).json({ error: "Erro ao verificar mesa existente" });
+
+    if (row) {
+      // Atualizar os itens e o total
+      const itensExistentes = JSON.parse(row.itens);
+      const novosItens = [...itensExistentes, ...itens];
+      const novoTotal = row.total + total;
+
+      db.run(
+        `UPDATE pedidos SET itens = ?, total = ? WHERE id = ?`,
+        [JSON.stringify(novosItens), novoTotal, row.id],
+        function (err) {
+          if (err) return res.status(500).json({ error: "Erro ao atualizar pedido existente" });
+          res.json({ message: "Pedido atualizado", pedidoId: row.id });
+        }
+      );
+    } else {
+      // Criar um novo pedido
+      db.run(
+        `INSERT INTO pedidos (cliente, itens, total, mesa) VALUES (?, ?, ?, ?)`,
+        [cliente, JSON.stringify(itens), total, mesa],
+        function (err) {
+          if (err) return res.status(500).json({ error: "Erro ao inserir pedido novo" });
+          res.json({ message: "Pedido criado", pedidoId: this.lastID });
+        }
+      );
+    }
+  });
 });
 
 app.listen(PORT, () => {
