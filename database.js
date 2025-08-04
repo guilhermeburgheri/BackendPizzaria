@@ -9,6 +9,7 @@ db.serialize(() => {
       cliente TEXT,
       itens TEXT,
       total REAL,
+      mesa TEXT,
       criado_em DATETIME DEFAULT CURRENT_TIMESTAMP
     )
   `);

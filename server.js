@@ -51,10 +51,10 @@ app.get('/api/pedidos', (req, res) => {
 
 // Criar pedido
 app.post('/api/pedidos', (req, res) => {
-  const { cliente, itens, total } = req.body;
-  const stmt = db.prepare(`INSERT INTO pedidos (cliente, itens, total) VALUES (?, ?, ?)`);
+  const { cliente, itens, total, mesa } = req.body;
+  const stmt = db.prepare(`INSERT INTO pedidos (cliente, itens, total, mesa) VALUES (?, ?, ?, ?)`);
   const itensStr = typeof itens === 'string' ? itens : JSON.stringify(itens);
-  stmt.run(cliente, itensStr, total, function (err) {
+  stmt.run(cliente, itensStr, total, mesa, function (err) {
     if (err) return res.status(500).json({ error: err.message });
     res.status(201).json({ message: 'Pedido salvo!', id: this.lastID });
   });
