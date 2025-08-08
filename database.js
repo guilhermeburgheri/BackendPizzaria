@@ -10,6 +10,7 @@ db.serialize(() => {
       itens TEXT,
       total REAL,
       mesa TEXT,
+      observacoes TEXT,
       criado_em DATETIME DEFAULT CURRENT_TIMESTAMP
     )
   `);

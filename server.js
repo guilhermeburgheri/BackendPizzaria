@@ -74,30 +74,35 @@ app.put('/api/pedidos/:id', (req, res) => {
 });
 
 app.post("/api/pedidos", (req, res) => {
-  const { cliente, itens, total, mesa } = req.body;
+  const { cliente, itens, total, mesa, observacoes } = req.body;
 
   db.get(`SELECT * FROM pedidos WHERE mesa = ? ORDER BY criado_em DESC LIMIT 1`, [mesa], (err, row) => {
     if (err) return res.status(500).json({ error: "Erro ao verificar mesa existente" });
 
     if (row) {
-      // Atualizar os itens e o total
+      // Atualizar os pedidos
       const itensExistentes = JSON.parse(row.itens);
       const novosItens = [...itensExistentes, ...itens];
       const novoTotal = row.total + total;
 
       db.run(
-        `UPDATE pedidos SET itens = ?, total = ? WHERE id = ?`,
-        [JSON.stringify(novosItens), novoTotal, row.id],
+        `UPDATE pedidos SET itens = ?, total = ?, observacoes = COALESCE(observacoes, '') || CASE WHEN ? IS NOT NULL AND ? <> '' THEN CASE WHEN COALESCE(observacoes,'') <> '' THEN ' | ' || ? ELSE ? END ELSE '' END WHERE id = ?`,
+        [
+          JSON.stringify(novosItens),
+          novoTotal,
+          observacoes, observacoes, observacoes, observacoes,
+          row.id
+        ],
         function (err) {
           if (err) return res.status(500).json({ error: "Erro ao atualizar pedido existente" });
           res.json({ message: "Pedido atualizado", pedidoId: row.id });
         }
       );
     } else {
-      // Criar um novo pedido
+      // Criar novo pedido
       db.run(
-        `INSERT INTO pedidos (cliente, itens, total, mesa) VALUES (?, ?, ?, ?)`,
-        [cliente, JSON.stringify(itens), total, mesa],
+        `INSERT INTO pedidos (cliente, itens, total, mesa, observacoes) VALUES (?, ?, ?, ?, ?)`,
+        [cliente, JSON.stringify(itens), total, mesa, observacoes || null],
         function (err) {
           if (err) return res.status(500).json({ error: "Erro ao inserir pedido novo" });
           res.json({ message: "Pedido criado", pedidoId: this.lastID });
